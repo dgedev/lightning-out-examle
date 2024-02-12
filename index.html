@@ -20,16 +20,15 @@
   </head>
   <body>
     <script>
-      $Lightning.use("c:exampleApp", function () {
-        $Lightning.createComponent(
-          "c:exampleDatatable", 
-          {},
-          "lightningOutContainer",
-          function (cmp) {
-             console.log("Lighting out rendering complete");
-          }
-        );
-      });
+        $Lightning.use("c:exampleApp", function() {
+          $Lightning.createComponent("c:exampleDatatable",
+              {},
+              "lightningOutContainer",
+              function(cmp) {
+                console.log("Component was created");
+              }
+          );
+        });
     </script>
     <div class="slds-context-bar">
       <div class="slds-context-bar__primary">
