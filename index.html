@@ -10,12 +10,25 @@
     />
     <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
     <style>
-        .slds-card {
-          max-width: 800px; 
-          margin-top: 60px;
-          margin-left: 60px;
-        }
-      </style>    
+      .slds-card {
+        max-width: 800px;
+        margin-top: 60px;
+        margin-left: 60px;
+      }
+    </style>
+    <script src="https://flow-computing-9844.scratch.lightning.force.com/lightning/lightning.out.js"></script>
+    <script>
+      $Lightning.use("c:exampleApp", function () {
+        $Lightning.createComponent(
+          "c:exampleApp", 
+          {},
+          "lightningOutContainer",
+          function (cmp) {
+            // Callback-Funktion
+          }
+        );
+      });
+    </script>
   </head>
   <body>
     <div class="slds-context-bar">
@@ -92,8 +105,11 @@
           </div>
         </header>
       </div>
-      <div class="slds-card__body slds-card__body_inner">
-        Anything can go into the card body
+      <div
+        class="slds-card__body slds-card__body_inner"
+        id="lightningOutContainer"
+      >
+        <!-- Container -->
       </div>
       <footer class="slds-card__footer">
         <a class="slds-card__footer-action" href="#"
